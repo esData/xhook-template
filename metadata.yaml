@@ -1,0 +1,20 @@
+type: hook-action
+action_bound: both
+invoke:
+  - ttPAYMENT
+  - ttACCOUNT_SET
+name: wsam-action
+version: v0.1.0
+summary: XRPL action hook - forward setter
+source: https://github.com/esdata/hook-template
+description: |
+  This is a template for creating a XRPL Hook repository.
+
+author: esDataCo
+email: info@esdata.co
+url: xhookcontro.esdata.io
+license: Apache-2.0
+tags:
+- template
+- hook control
+- action|both
