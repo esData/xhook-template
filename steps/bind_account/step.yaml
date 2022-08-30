@@ -1,0 +1,13 @@
+name: accept
+type: step
+version: 1
+summary: commit hook changes with a reason code
+templates:
+  main: main.c.mustache
+  body:
+    - accept.c.mustache
+parameters:
+  reason:
+    description: Reason or references code
+    type: string
+    default: SUCCESS

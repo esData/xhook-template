@@ -38,6 +38,14 @@ This repository serves as a template for creating new xHook component repository
 
 ## Metadata definition
 
+## Reserved keywords
+
+- parameters
+- secrets
+- output
+- hookname
+- step
+
 ## Naming conventions
 
 Hooks namespace should start with unique name with `workflow step`

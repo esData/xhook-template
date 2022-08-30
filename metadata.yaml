@@ -3,15 +3,15 @@ action_bound: both
 invoke:
   - ttPAYMENT
   - ttACCOUNT_SET
-name: wsam-action
+name: split
 version: v0.1.0
-summary: XRPL action hook - forward setter
+summary: Xhook - split incoming our outgoing amount to seperate account
 source: https://github.com/esdata/hook-template
 description: |
   This is a template for creating a XRPL Hook repository.
 
 author: esDataCo
-email: info@esdata.co
+email: cheehuan@esdata.co
 url: xhookcontro.esdata.io
 license: Apache-2.0
 tags:
