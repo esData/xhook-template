@@ -1,0 +1,15 @@
+## Example workflow
+summary: Starter - a simple accept workflow on Alice account
+description: a simple workflow that demostrate the hook commit usages in Alice account
+source_url: https://github.com/esdata/xhookcontrol/xhook-template 
+tags:
+  - example
+steps:
+- name: sample workflow for include reference no in test account
+  parameters:
+    message: test
+- name: xxxx
+  image: relaysh/stdlib-step-echo
+  parameters:
+    message: tst
+  dependsOn: echo

@@ -11,3 +11,9 @@ parameters:
     description: Reason or references code
     type: string
     default: SUCCESS
+test:
+  - summary: unit test a single commit hook
+    type: task
+    parameters:
+      reason: UNIT_TEST
+

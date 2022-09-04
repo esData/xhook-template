@@ -1,13 +1,18 @@
-name: accept
+name: bind_account
 type: step
 version: 1
-summary: commit hook changes with a reason code
+summary: continue only transactions was prepare/from hook account.
 templates:
   main: main.c.mustache
   body:
-    - accept.c.mustache
+    - bind_account.c.mustache
 parameters:
   reason:
     description: Reason or references code
     type: string
     default: SUCCESS
+test:
+  - summary: unit test a single commit hook
+    type: task
+    parameters:
+      reason: UNIT_TEST
