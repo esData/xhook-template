@@ -1,20 +1,47 @@
-type: hook-action
-action_bound: both
-invoke:
-  - ttPAYMENT
-  - ttACCOUNT_SET
-name: split
-version: v0.1.0
-summary: Xhook - split incoming our outgoing amount to seperate account
-source: https://github.com/esdata/hook-template
-description: |
-  This is a template for creating a XRPL Hook repository.
+# type, Required. Must be exactly the string "Integration".
+type: Integration
 
-author: esDataCo
-email: cheehuan@esdata.co
-url: xhookcontro.esdata.io
+# integration slug. Required.
+name: ripple-hook
+
+# The version of the integration. Required. This is an arbitrary text string
+# used to identify the bundle of actions for this release. Using dates or
+# incrementing integers is recommended. Each version replaces the one before it
+# on the specified release channel.
+#
+# As a convenience, this information may come from another text file or from a
+# Git tag (if applicable).
+version: v0.1.0
+
+# description of this integration. Required.
+summary: Ripple Hook
+
+# A paragraph or two describing what this integration does. Optional. Markdown.
+description: |
+  Ripple Hook integration. Example template for Hook steps implementation
+
+# Home intro URL to this integration's Website. Optional.
+home_url: https://github.com/esData/xhook-template
+
+# Source URL to this integration's Website. Optional.
+source_url: https://github.com/esData/xhook-template
+
+# Issue URL to this integration's Website. Optional.
+issues_url: https://github.com/esData/xhook-template/issues
+
+# Owner of this integration. Required.
+owner: 
+  name: esDataCo
+  email: cheehuan@esdata.co
+  url: https://esdata.co
+
+# License information. Optional. If not specified, this integration is assumed
+# to be unlicensed proprietary code. Otherwise, must be a valid SPDX License
+# Expression (similar to npm) or an object referencing a license file.
 license: Apache-2.0
+
+# tags, Optional.
 tags:
+- integration
 - template
-- hook control
-- action|both
+- ripple hook

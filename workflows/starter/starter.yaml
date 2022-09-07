@@ -1,7 +1,11 @@
 ## Example workflow
 summary: Starter - a simple accept workflow on Alice account
 description: a simple workflow that demostrate the hook commit usages in Alice account
-source_url: https://github.com/esdata/xhookcontrol/xhook-template 
+source_url: https://github.com/esdata/xhookcontrol/xhook-template
+action_bound: both
+invoke:
+  - ttPAYMENT
+  - ttACCOUNT_SET
 tags:
   - example
 steps:
