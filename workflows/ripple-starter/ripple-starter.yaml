@@ -1,0 +1,37 @@
+# Example workflow
+summary: Ripple starter
+description: This workflow allow both incoming and outcoming transaction.
+url: https://github.com/esDataCo/tree/master/ripple-starter
+action_bound: both
+invoke:
+  - ttPAYMENT
+  - ttACCOUNT_SET
+tags:
+  - accept
+
+# Uncomment out this trigger to run this workflow hourly.
+# triggers:
+# - name: schedule
+#   source:
+#     type: schedule
+#     schedule: '0 * * * *'
+
+parameters:
+  reason:
+    description: accept reason code
+    default: SUCCESS
+  accounts:
+    description: set-hook accounts
+
+steps:
+- name: starter-accepts
+  template: xhook/steps-accept
+  input:
+    reason: !Parameter reason
+- name: set-hook
+  template: xhook/steps-set_hooks
+  dependsOn: accepts
+  # inputFile: https://raw.githubusercontent.com/esData/xhook-workflows/master/ripple-start/accounts/accounts.csv
+  input:
+    wasm_file_url: !Output {from: starter-accepts, name: wasm_uri}
+    accounts: !Parameter accounts

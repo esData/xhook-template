@@ -3,9 +3,10 @@ type: step
 version: 1
 summary: commit hook changes with a reason code
 templates:
-  main: main.c.mustache
-  body:
-    - accept.c.mustache
+  accept:
+    main: main.c.mustache
+    body:
+      - accept.c.mustache
 parameters:
   reason:
     description: Reason or references code
@@ -16,4 +17,7 @@ test:
     type: task
     parameters:
       reason: UNIT_TEST
-
+# if only ONE template in workflow default will prepare 'templates-output' and ignore templates
+outputs:
+  templates: 
+    accept: accept.wsam
