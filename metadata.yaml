@@ -11,7 +11,7 @@ name: ripple-hook
 #
 # As a convenience, this information may come from another text file or from a
 # Git tag (if applicable).
-version: v0.1.0
+version: 0.1.0
 
 # description of this integration. Required.
 summary: Ripple Hook
@@ -30,10 +30,7 @@ source_url: https://github.com/esData/xhook-template
 issues_url: https://github.com/esData/xhook-template/issues
 
 # Owner of this integration. Required.
-owner: 
-  name: esDataCo
-  email: cheehuan@esdata.co
-  url: https://esdata.co
+owner: cheehuan@esdata.co
 
 # License information. Optional. If not specified, this integration is assumed
 # to be unlicensed proprietary code. Otherwise, must be a valid SPDX License
@@ -44,4 +41,3 @@ license: Apache-2.0
 tags:
 - integration
 - template
-- ripple hook

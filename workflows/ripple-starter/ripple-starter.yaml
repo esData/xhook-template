@@ -8,6 +8,7 @@ invoke:
   - ttACCOUNT_SET
 tags:
   - accept
+environment: hooks-testnet-v2.xrpl-labs.com
 
 # Uncomment out this trigger to run this workflow hourly.
 # triggers:
