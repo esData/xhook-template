@@ -2,6 +2,9 @@ name: accept
 type: step
 version: 1
 summary: commit hook changes with a reason code
+description: a ripple accept templates
+tags:
+  - accept
 templates:
   accept:
     main: main.c.mustache

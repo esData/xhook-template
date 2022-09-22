@@ -2,6 +2,9 @@ name: bind_account
 type: step
 version: 1
 summary: continue only transactions was prepare/from hook account.
+description: bind_account
+tags:
+  - accept
 templates:
   main: main.c.mustache
   body:

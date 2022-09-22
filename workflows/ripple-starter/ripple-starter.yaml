@@ -9,6 +9,7 @@ invoke:
 tags:
   - accept
 environment: hooks-testnet-v2.xrpl-labs.com
+publish: public
 
 # Uncomment out this trigger to run this workflow hourly.
 # triggers:
@@ -25,14 +26,14 @@ parameters:
     description: set-hook accounts
 
 steps:
-- name: starter-accepts
-  template: xhook/steps-accept
-  input:
-    reason: !Parameter reason
-- name: set-hook
-  template: xhook/steps-set_hooks
-  dependsOn: accepts
-  # inputFile: https://raw.githubusercontent.com/esData/xhook-workflows/master/ripple-start/accounts/accounts.csv
-  input:
-    wasm_file_url: !Output {from: starter-accepts, name: wasm_uri}
-    accounts: !Parameter accounts
+  starter-accepts:
+    template: xhook/steps-accept
+    parameters:
+      reason: "$[parameters.global-delay]"
+  set-hook:
+    template: xhook/steps-set_hooks
+    dependsOn: accepts
+    # inputFile: https://raw.githubusercontent.com/esData/xhook-workflows/master/ripple-start/accounts/accounts.csv
+    parameters:
+      wasm_file_url: !Output {from: starter-accepts, name: wasm_uri}
+      accounts: "$[parameters.global-delay]"

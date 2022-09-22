@@ -2,6 +2,10 @@ name: set_hooks
 type: step
 version: 1
 summary: deploy hook to specific account, list up to 4 accounts.
+description: deploy hook to specific account, list up to 4 accounts.
+tags:
+  - set_hook
+  - fee
 parameters:
   accounts:
     description: account id and secrets retreived from the vaults
