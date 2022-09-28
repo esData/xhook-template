@@ -1,6 +1,6 @@
 # xHook Template
 
-![esData](./images.svg)
+![esData](./images/icon.svg)
 This repository serves as a template for creating new component repository to be uses in xHookControl BPM workflow.
 
 ## Directory structure
