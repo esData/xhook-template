@@ -1,5 +1,6 @@
 # xHook Template
 
+![esData](./images.svg)
 This repository serves as a template for creating new component repository to be uses in xHookControl BPM workflow.
 
 ## Directory structure
@@ -9,6 +10,8 @@ This repository serves as a template for creating new component repository to be
 ├── metadata.yaml             # metadata describing this integration
 ├── LICENSE                   # defaults to Apache, replace if that doesn't suit
 ├── README.md                 # this the files
+├── images                    # images folder
+│  └── icon.[png/svg]         # Step helpers library
 ├── _helpers                  # helpers lib
 │  └── steps_helper.js           # Step helpers library
 ├── steps                     # subdirectory for execution steps
