@@ -1,8 +1,5 @@
-# type, Required. Must be exactly the string "Integration".
-type: Integration
-
 # integration slug. Required.
-name: ripple-hook
+name: {{name}}
 
 # The version of the integration. Required. This is an arbitrary text string
 # used to identify the bundle of actions for this release. Using dates or
@@ -11,26 +8,26 @@ name: ripple-hook
 #
 # As a convenience, this information may come from another text file or from a
 # Git tag (if applicable).
-version: 0.1.0
+version: {{version}}
 
 # description of this integration. Required.
-summary: Ripple Hook
+summary: {{summary}}
 
 # A paragraph or two describing what this integration does. Optional. Markdown.
 description: |
-  Ripple Hook integration. Example template for Hook steps implementation
+  {{description}}
 
 # Home intro URL to this integration's Website. Optional.
-home_url: https://github.com/esData/xhook-template
+home_url: {{home url}}
 
 # Source URL to this integration's Website. Optional.
-source_url: https://github.com/esData/xhook-template
+source_url: {{source_url}}
 
 # Issue URL to this integration's Website. Optional.
-issues_url: https://github.com/esData/xhook-template/issues
+issues_url: {{issue_url}}
 
 # Owner of this integration. Required.
-owner: cheehuan@esdata.co
+email: {{email}}
 
 # License information. Optional. If not specified, this integration is assumed
 # to be unlicensed proprietary code. Otherwise, must be a valid SPDX License
@@ -40,4 +37,4 @@ license: Apache-2.0
 # tags, Optional.
 tags:
 - integration
-- template
+- {{aka short name}}

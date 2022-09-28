@@ -1,0 +1,45 @@
+---
+# Namespace encourge no spacing, lowercase and unique without hyphen.
+name: {{integration_name}}-{{workflow_name}}
+summary: {{summary}}
+description: {{description}}
+url: {{url}}
+action_bound: {{action_bound,[both|inbond|outbound]}}
+invokes:
+  - {{invoke, [ttPAYMENT|ttACCOUNT_SET]}}
+
+# Tags, special tags are reversed for steps, wasm, src, src_final, tested etc 
+tags:
+  - {{tag}}
+
+# Visibility to everyone or only owner
+publish: {{publish, [public,private,draft]}}
+
+# Global parameters scope in workflow, visiable to all steps
+parameters:
+  environment: hooks-testnet-v2.xrpl-labs.com
+  account: {{account}}
+  secret: {{secret}}
+
+# Step name must be unique in steps, step.status is optional. To skip a step, change status to disabled.
+# Step context exchange thru parameters by define explicitly StepName, global parameter are visible in all steps. 
+steps:
+  {{StepName}}:
+    step: {{HookName}}
+    block: true
+    ignore: false
+    parameters:
+      account: "$[parameters.account]"
+  trace_01:
+    step: ripple-trace
+    block: true
+    ignore: false
+    parameters:
+      message: 'Hello Ripple'
+  trace_02:
+    step: ripple-trace
+    block: true
+    ignore: false
+    parameters:
+      # message reading from trace_02 output. wasm, src is global parameter. 
+      message: "$[step.trace_02.output.result]"

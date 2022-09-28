@@ -1,0 +1,16 @@
+---
+name: {{integration_name}}-{{step_name}}
+version: {{version}}
+summary: {{description}}
+tags:
+  - {{tag}}
+templates:
+  {{integration_name}}-{{step_name}}:
+    main: {{integration_name}}-main.c.mustache
+    body:
+      - {{integration_name}}-{{step_name}}.c.mustache
+parameters:
+  {{params}}:
+    description: {{params_description}}
+    type: {{param_type}}
+    default: {{param_default}}
